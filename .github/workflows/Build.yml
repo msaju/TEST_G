@@ -22,5 +22,4 @@ jobs:
     - name: make
       run: make
     - name: makeRPMs
-      run: cd extras/LinuxRPM
-      run: make glusterrpms  
+      run:  ./buildrpms.sh
