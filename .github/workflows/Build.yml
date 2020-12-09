@@ -22,4 +22,4 @@ jobs:
     - name: make
       run: make
     - name: makeRPMs
-      run:  ./buildrpms.sh
+      run: ./buildrpms.sh
