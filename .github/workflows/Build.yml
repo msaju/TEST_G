@@ -21,5 +21,3 @@ jobs:
       run: ./configure
     - name: make
       run: make
-    - name: makeRPMs
-      run: ./buildrpms.sh
