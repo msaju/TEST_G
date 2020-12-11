@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Update
-      run: sudo apt update
+      run: sudo apt update -y
     - name: Install Containerd
       run: sudo apt install containerd
     - name: Install Docker
