@@ -14,3 +14,5 @@ jobs:
       run:  ./depdends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
+    - name: Docker running
+      run: docker run gluster-build
