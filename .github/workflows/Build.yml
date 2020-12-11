@@ -15,9 +15,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: setup
       run: ./depdends.sh
-    - name: AutoGen
-      run:  ./autogen.sh
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
+    - name: Docker Build
+      run: docker build -t gluster-build .
