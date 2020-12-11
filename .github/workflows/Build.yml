@@ -12,6 +12,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Update
       run: sudo apt update
+    - name: Install Containerd
+      run: sudo apt install containerd
     - name: Install Docker
       run: sudo apt install -y docker.io
     - name: Start Docker
