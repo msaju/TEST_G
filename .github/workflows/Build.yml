@@ -7,11 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name:Checkout
+    - name: Checkout
     - uses: actions/checkout@v2
-      with: 
-      repository: msaju/TEST_BUILD_AUTOMATION
-    - name:setup
-      run: ./depends.sh
+    - name: setup
+      run: ./depdends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
