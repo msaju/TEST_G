@@ -10,6 +10,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Update
+      run: sudo apt update
     - name: configure
       run: ./depdends.sh
     - name: Docker Build
