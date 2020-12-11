@@ -7,13 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: setup
-      run: sudo apt update
-      run: sudo apt install -y docker.io
-      run: systemctl start docker
-      run: git clone https://github.com/msaju/TEST_BUILD_AUTOMATION.git
-      run: mkdir -p gluster-build
-      run: cp TEST_BUILD_AUTOMATION/Dockerfile gluster-build/
-      run: cd gluster-build/
+    - name:Checkout
+    - uses: actions/checkout@v2
+      with: 
+      repository: msaju/TEST_BUILD_AUTOMATION
+    - name:setup
+      run: ./depends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
