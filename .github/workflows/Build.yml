@@ -10,19 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Update
-      run: sudo apt update -y
-    - name: Install Containerd
-      run: sudo apt install containerd
-    - name: Install Docker
-      run: sudo apt install -y docker.io
-    - name: Start Docker
-      run: systemctl start docker
-    - name: Create Docker Folder
-      run: mkdir -p gluster-build
-    - name: Copy Dockerfile
-      run: cp Dockerfile gluster-build/
-    - name: Change Dir
-      run: cd gluster-build/
+    - name: Update configs
+      run:  ./depdends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
