@@ -1,15 +1,16 @@
 name: Manual Workflow Trigger
+
 on: [workflow_dispatch]
+
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
-steps:	    
-    - name: Checkout
-      uses: actions/checkout@v2	
-    - name: setup
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
       run: ./depdends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
