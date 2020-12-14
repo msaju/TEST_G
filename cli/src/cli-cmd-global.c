@@ -66,6 +66,7 @@ cli_cmd_global_help_cbk(struct cli_state *state, struct cli_cmd_word *in_word,
     int count = 0;
 
     cmd = GF_MALLOC(sizeof(global_cmds), cli_mt_cli_cmd);
+   if(cmd){
     memcpy(cmd, global_cmds, sizeof(global_cmds));
     count = (sizeof(global_cmds) / sizeof(struct cli_cmd));
     cli_cmd_sort(cmd, count);
@@ -77,7 +78,9 @@ cli_cmd_global_help_cbk(struct cli_state *state, struct cli_cmd_word *in_word,
             cli_out("%s - %s", global_cmd->pattern, global_cmd->desc);
 
     cli_out("\n");
+      
     GF_FREE(cmd);
+   }
     return 0;
 }
 
