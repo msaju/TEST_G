@@ -79,6 +79,7 @@ cb_add_entry_buffer(buffer_t *buffer, void *item)
         write_index = __cb_add_entry_buffer(buffer, item);
     }
     pthread_mutex_unlock(&buffer->lock);
+  
 
     return write_index;
 }
