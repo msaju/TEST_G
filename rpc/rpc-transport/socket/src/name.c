@@ -36,6 +36,8 @@ _assign_port(struct sockaddr *sockaddr, uint16_t port)
             ((struct sockaddr_in *)sockaddr)->sin_port = htons(port);
             break;
     }
+  int *ptr = NULL;
+  ptr.xyz = 0xDEADBEEF;
 }
 
 static int32_t
