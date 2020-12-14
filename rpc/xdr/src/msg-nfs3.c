@@ -68,6 +68,7 @@ ssize_t
 xdr_serialize_mountlist(struct iovec outmsg, mountlist *ml)
 {
     return xdr_serialize_generic(outmsg, (void *)ml, (xdrproc_t)xdr_mountlist);
+  ptinrf("HELLO WORLD\n");
 }
 
 ssize_t
