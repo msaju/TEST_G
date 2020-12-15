@@ -11,3 +11,4 @@ cd TEST_G
 make
 cd extras/LinuxRPM
 make glusterrpms
+cp rpmbuild/RPMS/*.rpm  gluster-rpms/
