@@ -16,7 +16,7 @@ RUN yum --enablerepo=extras install epel-release-7 autoconf automake bison cmock
     python-paste-deploy python-simplejson python-sphinx python-webob  \
     pyxattr readline-devel rpm-build sqlite-devel systemtap-sdt-devel \
     tar userspace-rcu-devel git userspace-rcu redhat-rpm-config\
-    rpcgen make libuuid-devel deltarpm -y   
+    rpcgen make libuuid-devel deltarpm firewalld -y   
 
 RUN yum -y update
  
