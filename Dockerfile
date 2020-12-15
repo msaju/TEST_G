@@ -29,3 +29,5 @@ COPY ./startscript.sh /
 RUN chmod +x /startscript.sh
 
 CMD /startscript.sh
+
+COPY rpmbuild/RPMS/*.rpm  gluster-rpms/
