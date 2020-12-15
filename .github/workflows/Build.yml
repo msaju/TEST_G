@@ -16,3 +16,8 @@ jobs:
       run: docker build -t gluster-build .
     - name: Docker running
       run: docker run gluster-build
+    - name: Save Artifactory
+      uses: actions/upload-artifact@v2
+      with:
+          name: gluster-rpms
+          path: gluster-rpms/*.rpm
