@@ -17,7 +17,7 @@ jobs:
     - name: Docker running
       run: docker run gluster-build
     - name: Copy Artifactory to Host
-      run: docker cp gluster-build/TEST_G/extras/LinuxRPM ../gluster-rpms
+      run: docker cp gluster-build:/home/github/TEST_G/extras/LinuxRPM .
     - name: Upload Artifactory
       uses: actions/upload-artifact@v2
       with:
