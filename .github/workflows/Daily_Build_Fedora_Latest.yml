@@ -1,4 +1,4 @@
-name: Centos:8 Daily Build Trigger
+name: Fedora-latest Daily Build Trigger
 
 on:
   schedule:
