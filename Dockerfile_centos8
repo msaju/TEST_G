@@ -16,7 +16,8 @@ RUN dnf -y install epel-release
 RUN yum --enablerepo=powertools -y install rpcgen
 
 RUN yum -y update
- 
+
+RUN yum clean all
 
 CMD ["/usr/sbin/init"]
 
