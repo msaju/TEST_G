@@ -1,4 +1,4 @@
-sudo apt update
+sudo apt update && sudo apt upgrade
 sudo apt install -y docker.io
 systemctl start docker
 mkdir -p gluster-build
