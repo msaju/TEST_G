@@ -11,7 +11,8 @@ RUN dnf install automake autoconf libtool flex bison openssl-devel  \
     libxml2-devel python-devel libaio-devel libibverbs-devel      \
     librdmacm-devel readline-devel lvm2-devel glib2-devel git     \
     userspace-rcu-devel libcmocka-devel libacl-devel sqlite-devel \
-    fuse-devel redhat-rpm-config rpcgen libtirpc-devel make libuuid-devel -y
+    fuse-devel redhat-rpm-config rpcgen libtirpc-devel make \
+    fedora-packager rpmdevtools libuuid-devel -y
 
 CMD ["/usr/sbin/init"]
 
