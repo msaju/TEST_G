@@ -1,10 +1,12 @@
 name: Create Release Build Centos-7 
 
-on: [workflow_dispatch]
-  inputs:
-    branchnumber:
+on: 
+  workflow_dispatch:
+  
+    inputs:
+      branchnumber:
         description: 'Name of Release(eg 8.3.1)'
-        required:true
+        required: true
            
 
 jobs:
