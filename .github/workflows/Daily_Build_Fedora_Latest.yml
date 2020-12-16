@@ -2,7 +2,7 @@ name: Fedora-latest Daily Build Trigger
 
 on:
   schedule:
-    - cron:  '0 45 * * *'
+    - cron:  '45 0 * * *'
 
 jobs:
   build:
