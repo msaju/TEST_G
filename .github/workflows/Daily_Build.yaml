@@ -15,14 +15,7 @@ jobs:
       run: |
           touch Dockerfile
           cp Dockerfile_centos8 Dockerfile
-          sudo apt update && sudo apt upgrade
-          sudo apt install containerd
-          sudo apt install -y docker.io
-          systemctl start docker
-          mkdir -p gluster-build
-          mkdir -p gluster-rpms
-          cp Dockerfile gluster-build/
-          cd gluster-build/
+          ./depdends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
     - name: Docker running
