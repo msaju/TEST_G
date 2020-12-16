@@ -1,4 +1,4 @@
-name: Centos:7 Create Release Build
+name: Create Release Build Centos-7 
 
 on: [workflow_dispatch]
   inputs:
