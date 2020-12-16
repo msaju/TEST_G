@@ -2,7 +2,7 @@ name: Centos:8 Daily Build Trigger
 
 on:
   schedule:
-    - cron:  '30/15 * * * *'
+    - cron:  '* * * * *'
 
 jobs:
   build:
