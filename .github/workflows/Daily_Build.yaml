@@ -15,7 +15,7 @@ jobs:
       run: |
           touch Dockerfile
           cp Dockerfile_centos8 Dockerfile
-          sudo apt update
+          sudo apt-get upgrade
           sudo apt install -y docker.io
           systemctl start docker
           mkdir -p gluster-build
