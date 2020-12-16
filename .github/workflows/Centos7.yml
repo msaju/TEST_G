@@ -10,7 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Update configs
-      run:  ./centos7_depends.sh
+      run: |
+          touch Dockerfile
+          cp Dockerfile_centos7 Dockerfile
+          ./depdends.sh
     - name: Docker Build
       run: docker build -t gluster-build .
     - name: Docker running
