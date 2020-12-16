@@ -9,7 +9,7 @@ RUN dnf -y update && dnf clean all
 
 RUN dnf install automake autoconf libtool flex bison openssl-devel  \
     libxml2-devel python-devel libaio-devel libibverbs-devel      \
-    librdmacm-devel readline-devel lvm2-devel glib2-devel         \
+    librdmacm-devel readline-devel lvm2-devel glib2-devel git     \
     userspace-rcu-devel libcmocka-devel libacl-devel sqlite-devel \
     fuse-devel redhat-rpm-config rpcgen libtirpc-devel make -y
 
