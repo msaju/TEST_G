@@ -7,14 +7,12 @@ on:
       branchnumber:
         description: 'Name of Release(eg 8.3.1)'
         required: true
-           
 
 jobs:
-  createrelease:
+  Build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
     - uses: actions/checkout@v2
     - name: Checkout Release Branch
       run: git checkout -b release-v${{github.event.inputs.branchnumber}}
