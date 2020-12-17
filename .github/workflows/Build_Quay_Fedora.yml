@@ -15,7 +15,7 @@ jobs:
     - name: Pull Docker Image From Quay 
       run: docker pull quay.io/msaju/fedora-gluster-build
     - name: Running Container
-      run: docker run --name container_gluster gluster-build
+      run: docker run --name container_gluster quay.io/msaju/fedora-gluster-build
     - name: Copy Artifactory to Host
       run: docker cp container_gluster:/github/glusterfs/extras/LinuxRPM .
     - name: Upload Artifactory
