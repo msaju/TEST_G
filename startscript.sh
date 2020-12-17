@@ -4,8 +4,8 @@ mkdir github
 cd github
 git config --global user.email "sajmoham@redhat.com"
 git config --global user.name  "msaju"
-git clone https://github.com/msaju/TEST_G.git
-cd TEST_G
+git clone https://github.com/gluster/glusterfs.git
+cd glusterfs
 ./autogen.sh
 ./configure
 make
