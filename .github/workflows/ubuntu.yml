@@ -21,6 +21,6 @@ jobs:
     - name: Upload Artifactory
       uses: actions/upload-artifact@v2
       with:
-          name: gluster-rpms
+          name: gluster-deb
           path: /build-out/*.*deb
           retention-days: 1
