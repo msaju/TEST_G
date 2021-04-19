@@ -19,7 +19,7 @@ jobs:
     - name: Running Build in Centos8 Container
       run: docker run --name container_gluster quay.io/msaju/test-centos-perf
     - name: Copy Artifactory to Host
-      run: docker cp container_gluster:/github/glusterfs/extras/LinuxRPM .
+      run: docker cp container_gluster:/glusterfs/extras/LinuxRPM .
     - name: Upload Artifactory
       uses: actions/upload-artifact@v2
       with:
