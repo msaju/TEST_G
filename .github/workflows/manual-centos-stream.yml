@@ -16,9 +16,7 @@ jobs:
     - name: Pull Docker Image From Quay 
       run: docker pull quay.io/centos/centos:stream8
     - name: Running Build in Centos8 Container
-      run: docker run --name container_gluster quay.io/centos/centos:stream8
-    - name: Copy Artifactory to Host
-      run: docker cp container_gluster:/glusterfs/extras/LinuxRPM .
+      run: docker run --name container_gluster -v /build-out:/out quay.io/centos/centos:stream8
     - name: Upload Artifactory
       uses: actions/upload-artifact@v2
       with:
