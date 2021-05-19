@@ -1,0 +1,17 @@
+name: create pull request list
+on:
+   workflow_dispatch:
+ 
+jobs:
+  generate pull request list:
+    runs-on: ubuntu-latest
+    name: list pull requests
+    steps:
+      - name: listPullRequests
+        uses: buildsville/list-pull-requests@v1
+        id: list
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          hour: '24'
+      - name: output
+        run: echo '${{ steps.list.outputs.pulls }}'
