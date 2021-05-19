@@ -1,17 +1,14 @@
-name: create pull request list
+name: list-merged-pull-requests example
+
 on:
    workflow_dispatch:
- 
+   
 jobs:
-  Build:
+  example:
+    name: Release management comment
     runs-on: ubuntu-latest
-    name: list pull requests
     steps:
-      - name: listPullRequests
-        uses: buildsville/list-pull-requests@v1
-        id: list
+      - name: Comment on PR
+        uses: tiwanari/list-merged-pull-requests@master
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          hour: '24'
-      - name: output
-        run: echo '${{ steps.list.outputs.pulls }}'
+          token: ${{ github.token }}
