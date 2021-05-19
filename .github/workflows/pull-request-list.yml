@@ -3,7 +3,7 @@ on:
    workflow_dispatch:
  
 jobs:
-  generate pull request list:
+  Build:
     runs-on: ubuntu-latest
     name: list pull requests
     steps:
