@@ -17,6 +17,7 @@ jobs:
       # ...and then use the action as you would normally do, but providing the path to the repo
       - uses: EndBug/add-and-commit@v7
         with:
-          message: 'Comment for Monthly Trigger'
-          add: '*.txt --force'
+          message: 'GitHub Actions Monthly Trigger'
+          add: 'monthly-trigger.txt --force'
           cwd: '/Dockerfile/'
+          default_author: github_actions
