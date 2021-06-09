@@ -1,2 +1,1 @@
-# this is a monthly trigger file for Quay docker rebuild.
-# Monthly a date is checked in to trigger for quay
+Quay Build is triggered on Wed Jun  9 13:05:13 UTC 2021
