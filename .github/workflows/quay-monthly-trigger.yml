@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # You can make whatever type of change to the repo...
-      - run: echo "Quay Build is triggered on $(date)" > ./Dockerfile/monthly-trigger.txt
+      - run: echo "Quay Build is triggered on $(date)" >> ./Dockerfile/monthly-trigger.txt
 
       # ...and then use the action as you would normally do, but providing the path to the repo
       - uses: EndBug/add-and-commit@v7
