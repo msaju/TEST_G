@@ -1,0 +1,2 @@
+# this is a monthly trigger file for Quay docker rebuild.
+# Monthly a date is checked in to trigger for quay
