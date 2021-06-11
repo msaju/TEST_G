@@ -1,3 +1,4 @@
+sudo apt install -y runc
 sudo apt install -y containerd
 sudo apt install -y docker.io
 systemctl start docker
