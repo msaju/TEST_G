@@ -18,7 +18,7 @@ jobs:
     - name: Pull Docker Image From Quay 
       run: docker pull quay.io/centos/centos:stream8
     - name: Running Build in Centos8 Container
-      run: docker run -it -v /$(pwd):/host --name container_gluster quay.io/centos/centos:stream8
+      run: docker run -it --entrypoint /bin/sh -v /$(pwd):/host --name container_gluster quay.io/centos/centos:stream8
     - name: Change to host directory
       run: cd host/
     - name: setup the os dependencies, since container is pulled raw from Quay
