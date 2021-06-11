@@ -12,11 +12,19 @@ jobs:
     - name: Configure Host
       run: |
              chmod +x Setup_Host.sh
+             chmod +x setup-os.sh
+             chmod +x startscript.sh
              ./Setup_Host.sh
     - name: Pull Docker Image From Quay 
       run: docker pull quay.io/centos/centos:stream8
     - name: Running Build in Centos8 Container
-      run: docker run --name container_gluster quay.io/msaju/test-centos-perf
+      run: docker run -it -v /$(pwd):/host --name container_gluster quay.io/centos/centos:stream8
+    - name: Change to host directory
+      run: cd host/
+    - name: setup the os dependencies, since container is pulled raw from Quay
+      run: ./setup-os.sh
+    - name: Run the startup script
+      run: ./startscript.sh
     - name: Copy Artifactory to Host
       run: docker cp container_gluster:/glusterfs/extras/LinuxRPM .
     - name: Upload Artifactory
@@ -25,3 +33,5 @@ jobs:
           name: gluster-rpms
           path: LinuxRPM/*.rpm
           retention-days: 1
+    - name: Exit the interactive terminal to host
+      run: exit
