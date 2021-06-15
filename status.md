@@ -1,1 +1,5 @@
 [![Nightly Build (fedora/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Fedora_Latest.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
+[![Nightly Build (centos7/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Centos7.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
+[![Nightly Build (centos8/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Centos8.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
+[![Nightly Build (debian/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/nightly-build-debian.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
+[![Nightly Build (ubuntu/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/nightly-build-ubuntu.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
