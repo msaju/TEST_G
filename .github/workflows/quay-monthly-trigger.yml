@@ -1,8 +1,6 @@
 name: Quay Monthly Trigger 
 
-on:
-  schedule:
-    - cron:  '0 0 10 * *'
+on: [workflow_dispatch]
 
 jobs:
   run:
