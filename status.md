@@ -21,5 +21,5 @@
 **Coverity**
 <a href="https://scan.coverity.com/projects/gluster-glusterfs">
   <img alt="Coverity Scan Build Status"
-       src="https://scan.coverity.com/projects/gluster-glusterfs/badge.svg"/>
+       src="https://scan.coverity.com/projects/987/badge.svg"/>
 </a>
