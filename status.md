@@ -1,6 +1,6 @@
 **GITHUB ACTIONS NIGHTLY BUILDS:**
 
-**1. Fedora Latest:** [![Nightly Build (fedora/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Fedora_Latest.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
+**1. Fedora :** [![Nightly Build (fedora/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Fedora_Latest.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
 
 **2. Centos 7:** [![Nightly Build (centos7/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Centos7.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
 
