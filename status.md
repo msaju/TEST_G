@@ -17,3 +17,9 @@
 
 **BUILD.GLUSTER.ORG BUILDS**
 1. [![Build Status](https://build.gluster.org/buildStatus/icon?job=32-bit-build-smoke)](https://build.gluster.org/job/32-bit-build-smoke/)
+
+**Coverity**
+<a href="https://scan.coverity.com/projects/gluster-glusterfs">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/gluster-glusterfs/badge.svg"/>
+</a>
