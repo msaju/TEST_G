@@ -1,5 +1,3 @@
-#!/bin/bash
-
 os=$1
 flavor=$2
 series=$3
