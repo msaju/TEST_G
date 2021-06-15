@@ -12,4 +12,5 @@ GITHUB ACTIONS NIGHTLY BUILDS:
 
 JENKINS NIGHTLY BUILDS:
 
-[![Nightly RPM Build Status](https://ci.centos.org/buildStatus/icon?job=gluster_nightly-rpm-builds)](https://ci.centos.org/view/Gluster/job/gluster_nightly-rpm-builds/)
+1. Nightly RPMs 
+[![Build Status](https://ci.centos.org/buildStatus/icon?job=gluster_nightly-rpm-builds)](https://ci.centos.org/view/Gluster/job/gluster_nightly-rpm-builds/)
