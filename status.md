@@ -10,7 +10,10 @@ GITHUB ACTIONS NIGHTLY BUILDS:
 
 [![Nightly Build (ubuntu/quay) Actions Status](https://github.com/gluster/Gluster-Builds/actions/workflows/nightly-build-ubuntu.yml/badge.svg)](https://github.com/gluster/Gluster-Builds/actions)
 
-JENKINS NIGHTLY BUILDS:
+CENTOS CI NIGHTLY BUILDS:
 
 1. Nightly RPMs 
-[![Build Status](https://ci.centos.org/buildStatus/icon?job=gluster_nightly-rpm-builds)](https://ci.centos.org/view/Gluster/job/gluster_nightly-rpm-builds/)
+[![Build Status](https://ci.centos.org/buildStatus/icon?job=gluster_build-rpms)](https://ci.centos.org/view/Gluster/job/gluster_build-rpms/)
+
+BUILD.GLUSTER.ORG BUILDS
+1. [![Build Status](https://build.gluster.org/buildStatus/icon?job=32-bit-build-smoke)](https://build.gluster.org/job/32-bit-build-smoke/)
