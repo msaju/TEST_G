@@ -20,6 +20,6 @@ jobs:
         - name: Unzip the results into coverage
           run: |
                 sudo apt install unzip -y
-                unzip Line_20Coverage_20Report.zip
+                unzip report/Line_20Coverage_20Report.zip
                 ls
                 pwd         
