@@ -1,0 +1,19 @@
+name: Workflow for Codecov Action
+
+on: [workflow_dispatch]
+
+jobs:
+
+  get-test-results:
+  
+      runs-on: ubuntu-latest
+      steps:
+        - name: Download a file
+          uses: carlosperate/download-file-action@v1.0.3
+          id: download-coverage-results
+          with:
+            file-url: 'https://build.gluster.org/job/line-coverage/lastBuild/Line_20Coverage_20Report/*zip*/Line_20Coverage_20Report.zip'
+            file-name: 'Line_20Coverage_20Report.zip'
+            location: './report'
+        - name: Print the file path
+          run: echo "The file was downloaded to ${{ steps.download-coverage-results.outputs.file-path }}"
