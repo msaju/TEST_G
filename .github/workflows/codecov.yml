@@ -21,9 +21,11 @@ jobs:
           run: |
                 sudo apt install unzip -y
                 unzip report/Line_20Coverage_20Report.zip
+                ls
                 cd report
+                ls
                 mkdir coverage
-                mv Line_20Coverage_20Report coverage/
+                mv Line_20Coverage_20Report/ coverage/
         - name: Upload coverage to Codecov
           uses: codecov/codecov-action@v1
           with:
