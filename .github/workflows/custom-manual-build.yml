@@ -1,4 +1,4 @@
-name: Create Release Build Centos-7 
+name: Custom Manual Builds
 
 on: 
   workflow_dispatch:
