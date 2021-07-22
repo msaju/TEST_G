@@ -25,15 +25,12 @@ jobs:
             if [[ "${{ github.event.inputs.buildosflavor }}" == "centos7" ]]; then
             docker pull quay.io/gluster/centos7-gluster-build
             docker run --name container_gluster quay.io/gluster/centos7-gluster-build
-                 
-      if: ${{github.event.inputs.buildosflavor == 'centos8'}}
-    - name: centos8 build
-      run: |
+            fi
+            if [[ "${{ github.event.inputs.buildosflavor }}" == "centos8" ]]; then
             docker pull quay.io/gluster/centos8-gluster-build
             docker run --name container_gluster quay.io/gluster/centos8-gluster-build
-            
-      if: ${{github.event.inputs.buildosflavor == 'fedora'}}
-    - name: fedora build
-      run: |
+            fi
+            if [[ "${{ github.event.inputs.buildosflavor }}" == "fedora" ]]; then
             docker pull quay.io/gluster/fedora-gluster-build
             docker run --name container_gluster quay.io/gluster/fedora-gluster-build
+            fi
