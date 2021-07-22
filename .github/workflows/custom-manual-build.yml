@@ -21,7 +21,7 @@ jobs:
              chmod +x Setup_Host.sh
              ./Setup_Host.sh
     - name: centos7 build
-      if: ${{github.event.inputs.buildosflavor == centos7}}
+      if: ${{github.event.inputs.buildosflavor == 'centos7'}}
       run: |
             docker pull quay.io/gluster/centos7-gluster-build
             docker run --name container_gluster quay.io/gluster/centos7-gluster-build
