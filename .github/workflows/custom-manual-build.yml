@@ -1,0 +1,27 @@
+name: Create Release Build Centos-7 
+
+on: 
+  workflow_dispatch:
+  
+    inputs:
+      buildosflavor:
+        description: 'Custom Manual Build'
+        required: true
+        options: ['centos7', 'centos8', 'fedora', 'ubuntu', 'debian']
+        default: 'fedora'
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure Host
+      run: |
+             chmod +x Setup_Host.sh
+             ./Setup_Host.sh
+    - name: centos7 build
+      if: ${{github.event.inputs.buildosflavor == centos7}}
+      run: |
+            docker pull quay.io/gluster/centos7-gluster-build
+            docker run --name container_gluster quay.io/gluster/centos7-gluster-build
