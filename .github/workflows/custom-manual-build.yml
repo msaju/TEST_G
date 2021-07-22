@@ -20,8 +20,21 @@ jobs:
       run: |
              chmod +x Setup_Host.sh
              ./Setup_Host.sh
-    - name: centos7 build
+    - name: Selecting buid based on OS flavour
       if: ${{github.event.inputs.buildosflavor == 'centos7'}}
+    - name: centos7 build
       run: |
             docker pull quay.io/gluster/centos7-gluster-build
             docker run --name container_gluster quay.io/gluster/centos7-gluster-build
+            
+      if: ${{github.event.inputs.buildosflavor == 'centos8'}}
+    - name: centos8 build
+      run: |
+            docker pull quay.io/gluster/centos8-gluster-build
+            docker run --name container_gluster quay.io/gluster/centos8-gluster-build
+            
+      if: ${{github.event.inputs.buildosflavor == 'fedora'}}
+    - name: fedora build
+      run: |
+            docker pull quay.io/gluster/fedora-gluster-build
+            docker run --name container_gluster quay.io/gluster/fedora-gluster-build
