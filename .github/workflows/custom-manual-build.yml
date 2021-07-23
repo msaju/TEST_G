@@ -20,6 +20,10 @@ jobs:
       run: |
              chmod +x Setup_Host.sh
              ./Setup_Host.sh
+    
+    - name: Cleanup Old Docker images if any
+      run:  docker system prune -af
+      
     - name: Selecting build based on OS flavour
       run: |
             if [[ "${{ github.event.inputs.buildosflavor }}" == "centos7" ]]; then
