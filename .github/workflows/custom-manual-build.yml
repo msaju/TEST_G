@@ -5,7 +5,7 @@ on:
   
     inputs:
       buildosflavor:
-        description: 'Custom Manual Build'
+        description: 'centos7 / centos8 / fedora / ubuntu / debian'
         required: true
         options: ['centos7', 'centos8', 'fedora', 'ubuntu', 'debian']
         default: 'fedora'
@@ -29,50 +29,25 @@ jobs:
             if [[ "${{ github.event.inputs.buildosflavor }}" == "centos7" ]]; then
             docker pull quay.io/gluster/centos7-gluster-build
             docker run --name container_gluster -v /build-out:/out quay.io/gluster/centos7-gluster-build
-            - name: Upload Artifactory
-              uses: actions/upload-artifact@v2
-                with:
-                  name: gluster-rpms
-                  path: LinuxRPM/*.rpm
-                  retention-days: 1
+  
             fi
             if [[ "${{ github.event.inputs.buildosflavor }}" == "centos8" ]]; then
             docker pull quay.io/gluster/centos8-gluster-build
             docker run --name container_gluster -v /build-out:/out quay.io/gluster/centos8-gluster-build
-            - name: Upload Artifactory
-              uses: actions/upload-artifact@v2
-                with:
-                  name: gluster-rpms
-                  path: LinuxRPM/*.rpm
-                  retention-days: 1
+
             fi
             if [[ "${{ github.event.inputs.buildosflavor }}" == "fedora" ]]; then
             docker pull quay.io/gluster/fedora-gluster-build
             docker run --name container_gluster -v /build-out:/out quay.io/gluster/fedora-gluster-build
-            - name: Upload Artifactory
-              uses: actions/upload-artifact@v2
-                with:
-                  name: gluster-rpms
-                  path: LinuxRPM/*.rpm
-                  retention-days: 1
+
             fi
             if [[ "${{ github.event.inputs.buildosflavor }}" == "ubuntu" ]]; then
             docker pull quay.io/gluster/ubuntu-gluster-build
             docker run --name container_gluster -v /build-out:/out quay.io/gluster/ubuntu-gluster-build
-            - name: Upload Artifactory
-              uses: actions/upload-artifact@v2
-                with:
-                  name: gluster-packages
-                  path: /build-out/*.*deb
-                  retention-days: 1
+
             fi
             if [[ "${{ github.event.inputs.buildosflavor }}" == "debian" ]]; then
             docker pull quay.io/gluster/debian-gluster-build
             docker run --name container_gluster -v /build-out:/out quay.io/gluster/debian-gluster-build
-            - name: Upload Artifactory
-              uses: actions/upload-artifact@v2
-                with:
-                  name: gluster-packages
-                  path: /build-out/*.*deb
-                  retention-days: 1
+
             fi
