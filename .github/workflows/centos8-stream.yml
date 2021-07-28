@@ -9,10 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a multi-line script
-      shell: 'script -q -e -c "bash {0}"'
-      run: |
-          perl -E 'say "Is STDOUT a TTY?: ", -t STDOUT ? "yes" : "no"'
     - name: Configure Host
       run: |
              chmod +x Setup_Host.sh
@@ -21,21 +17,17 @@ jobs:
              ./Setup_Host.sh
     - name: Pull Docker Image From Quay 
       run: docker pull quay.io/centos/centos:stream8
-    - name: Running Build in Centos8 Container
-      run: docker run -it --entrypoint /bin/sh -v /$(pwd):/host --name container_gluster quay.io/centos/centos:stream8
-    - name: Change to host directory
-      run: cd host/
+    - name: Running Build in ubuntu Container
+      run:  docker run --name container_gluster -v /build-out:/out quay.io/centos/centos:stream8
+    - name: Copy files to mounted dir
+      run: cp setup-os.sh startscript.sh /build-out/
+    - name: Execute bash
+      run: docker exec -it container_gluster bash
+    - name: Copy script to container
+      run: cp /out/*.sh .
     - name: setup the os dependencies, since container is pulled raw from Quay
       run: ./setup-os.sh
     - name: Run the startup script
       run: ./startscript.sh
-    - name: Copy Artifactory to Host
-      run: docker cp container_gluster:/glusterfs/extras/LinuxRPM .
-    - name: Upload Artifactory
-      uses: actions/upload-artifact@v2
-      with:
-          name: gluster-rpms
-          path: LinuxRPM/*.rpm
-          retention-days: 1
     - name: Exit the interactive terminal to host
       run: exit
