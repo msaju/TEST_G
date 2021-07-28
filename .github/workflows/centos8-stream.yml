@@ -20,7 +20,7 @@ jobs:
     - name: Running Build in ubuntu Container
       run:  docker run --name container_gluster -v /build-out:/out quay.io/centos/centos:stream8
     - name: Copy files to mounted dir
-      run: cp setup-os.sh startscript.sh /build-out/
+      run: sudo cp setup-os.sh startscript.sh /build-out/
     - name: Execute bash
       run: docker exec -it container_gluster bash
     - name: Copy script to container
