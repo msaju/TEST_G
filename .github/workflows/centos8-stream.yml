@@ -22,7 +22,7 @@ jobs:
     - name: Copy files to mounted dir
       run: sudo cp setup-os.sh startscript.sh /build-out/
     - name: Execute bash
-      run: docker exec -T -it container_gluster bash
+      run: docker exec -i container_gluster bash
     - name: Copy script to container
       run: cp /out/*.sh .
     - name: setup the os dependencies, since container is pulled raw from Quay
