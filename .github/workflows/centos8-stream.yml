@@ -18,7 +18,7 @@ jobs:
     - name: Pull Docker Image From Quay 
       run: docker pull quay.io/centos/centos:stream8
     - name: Running Build in ubuntu Container
-      run:  docker run -rm -i --name container_gluster -v /build-out:/out quay.io/centos/centos:stream8 bash
+      run:  docker run --rm -i --name container_gluster -v /build-out:/out quay.io/centos/centos:stream8 bash
     - name: Copy files to mounted dir
       run: sudo cp setup-os.sh startscript.sh /build-out/
     - name: Copy script to container
