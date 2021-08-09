@@ -1,0 +1,22 @@
+name: Create Release Build Centos-7 
+
+on: 
+  workflow_dispatch:
+  
+    inputs:
+      branchnumber:
+        description: 'Release Branch Number (eg v8.3)'
+        required: true
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Checkout Release Branch
+    - uses: actions/checkout@v2
+      with:
+        repository: gluster/glusterfs
+        path: './glusterfs'
+        run: git checkout tags/${{github.event.inputs.branchnumber}} -b ${{github.event.inputs.branchnumber}}-branch
