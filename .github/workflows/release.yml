@@ -18,4 +18,3 @@ jobs:
       with:
         repository: gluster/glusterfs
         path: './glusterfs'
-        run: git checkout tags/${{github.event.inputs.branchnumber}} -b rel-branch
