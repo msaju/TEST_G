@@ -1,0 +1,22 @@
+name: OpenSuse Build 
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: |
+            dnf -y install zypper
+            sudo zypper in osc
+    - name: clone-gluster-suse
+      run:  clone-gluster-suse.sh <suse falvor> <glusterfs series> <glusterfs version>
+    - name: trigger-build
+      run: trigger-build.sh <suse flavor> <glusterfs version>
+    - name: push-changes
+      run: push-changes.sh <suse flavor> <series> <version>
+     
