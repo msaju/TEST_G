@@ -12,6 +12,9 @@ jobs:
        env:
           USER: ${{ secrets.SUSE_USER }}
           PASSWORD: ${{ secrets.SUSE_PASSWORD }}
+       run: |
+        echo "$SUPER_SECRET"
+
      - uses: actions/checkout@v2
      - name: Install Dependencies
        run: |
