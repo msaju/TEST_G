@@ -1,0 +1,28 @@
+name: Ubuntu Docker build
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Update configs
+      run: |
+          touch Dockerfile
+          cp Dockerfile_ubuntu Dockerfile
+          ./depdends.sh
+    - name: Docker Build
+      run: docker build -t gluster-build .
+    - name: Docker running
+      run: docker run --security-opt seccomp=unconfined --name container_gluster gluster-build
+    - name: Copy Artifactory to Host
+      run: docker cp container_gluster:/github/TEST_G/extras/LinuxRPM .
+    - name: Upload Artifactory
+      uses: actions/upload-artifact@v2
+      with:
+          name: gluster-rpms
+          path: LinuxRPM/*.rpm
+          retention-days: 1
