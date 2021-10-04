@@ -6,7 +6,7 @@
     <a href="https://twitter.com/gluster">Twitter</a><br/><br/>
     <a href="https://docs.gluster.org/en/latest/Quick-Start-Guide/Quickstart/">Quick Start Guide</a> |
     <a href="https://docs.gluster.org/en/latest/release-notes/">Release Notes</a> |
-    <a href="https://www.gluster.org/community//">Community</a><br/><br/>
+    <a href="https://www.gluster.org/community/">Community</a><br/><br/>
     <a href="https://docs.gluster.org/en/latest/Contributors-Guide/Index/">Contribute to this project!</a>
 </h4>
 
