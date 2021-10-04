@@ -1,3 +1,35 @@
+<h1 align="center"><img src="https://www.gluster.org/wp-content/uploads/2016/03/gluster-ant.png" width="320" height="240" alt="Gluster is a free and open source software scalable network filesystem."></h1>
+
+<h4 align="center">
+    <a href="https://gluster.slack.com/">Slack</a> |
+    <a href="https://lists.gluster.org/mailman/listinfo">Mailing list</a> |
+    <a href="https://twitter.com/gluster">Twitter</a><br/><br/>
+    <a href="https://docs.gluster.org/en/latest/Quick-Start-Guide/Quickstart/">Quick Start Guide</a> |
+    <a href="https://docs.gluster.org/en/latest/release-notes/">Release Notes</a> |
+    <a href="https://www.gluster.org/community//">Community</a><br/><br/>
+    <a href="https://docs.gluster.org/en/latest/Contributors-Guide/Index/">Contribute to this project!</a>
+</h4>
+
+---
+
+<p align="left">
+    <a href="https://github.com/gluster/Gluster-Builds/actions"><img src="https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Fedora_Latest.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/gluster/Gluster-Builds/actions"> <img src="https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Centos7.yml/badge.svg" alt="Coverage Status"></a>
+    <a href="https://github.com/gluster/Gluster-Builds/actions"><img src="https://github.com/gluster/Gluster-Builds/actions/workflows/Nightly_Build_Centos8.yml/badge.svg"></a>
+    <a href="https://github.com/gluster/Gluster-Builds/actions"><img src="https://github.com/gluster/Gluster-Builds/actions/workflows/nightly-build-debian.yml/badge.svg"></a>
+    <a href="https://github.com/gluster/Gluster-Builds/actions"><img src="https://github.com/gluster/Gluster-Builds/actions/workflows/nightly-build-ubuntu.yml/badge.svg"></a>
+    <a href="https://ci.centos.org/view/Gluster/job/gluster_build-rpms/"><img src="https://ci.centos.org/buildStatus/icon?job=gluster_build-rpms"></a>
+    <a href="https://scan.coverity.com/projects/gluster-glusterfs"><img src="https://scan.coverity.com/projects/987/badge.svg"></a>
+    <a href="https://quay.io/repository/gluster/centos7-gluster-build/">Centos 7 <img src = "https://quay.io/repository/gluster/centos7-gluster-build/status"></a>
+<a href="https://quay.io/repository/gluster/centos8-gluster-build/">Centos 8 <img src = "https://quay.io/repository/gluster/centos8-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a>
+<a href="https://quay.io/repository/gluster/fedora-gluster-build/">Fedora <img src = "https://quay.io/repository/gluster/fedora-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a>
+<a href="https://quay.io/repository/gluster/ubuntu-gluster-build/">Ubuntu <img src = "https://quay.io/repository/gluster/ubuntu-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a> 
+<a href="https://quay.io/repository/gluster/debian-gluster-build/">Debian <img src = "https://quay.io/repository/gluster/debian-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a> 
+ </p>
+
+
+
+
 # Gluster
   Gluster is a software defined distributed storage that can scale to several
   petabytes. It provides interfaces for object, block and file storage.
