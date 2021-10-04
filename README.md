@@ -20,11 +20,6 @@
     <a href="https://github.com/gluster/Gluster-Builds/actions"><img src="https://github.com/gluster/Gluster-Builds/actions/workflows/nightly-build-ubuntu.yml/badge.svg"></a>
     <a href="https://ci.centos.org/view/Gluster/job/gluster_build-rpms/"><img src="https://ci.centos.org/buildStatus/icon?job=gluster_build-rpms"></a>
     <a href="https://scan.coverity.com/projects/gluster-glusterfs"><img src="https://scan.coverity.com/projects/987/badge.svg"></a>
-    <a href="https://quay.io/repository/gluster/centos7-gluster-build/">Centos 7 <img src = "https://quay.io/repository/gluster/centos7-gluster-build/status"></a>
-<a href="https://quay.io/repository/gluster/centos8-gluster-build/">Centos 8 <img src = "https://quay.io/repository/gluster/centos8-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a>
-<a href="https://quay.io/repository/gluster/fedora-gluster-build/">Fedora <img src = "https://quay.io/repository/gluster/fedora-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a>
-<a href="https://quay.io/repository/gluster/ubuntu-gluster-build/">Ubuntu <img src = "https://quay.io/repository/gluster/ubuntu-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a> 
-<a href="https://quay.io/repository/gluster/debian-gluster-build/">Debian <img src = "https://quay.io/repository/gluster/debian-gluster-build/status" style="vertical-align: text-top; padding-left: 7px;"></a> 
  </p>
 
 
