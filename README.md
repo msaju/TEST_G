@@ -71,3 +71,5 @@
   Gluster is dual licensed under [GPLV2](COPYING-GPLV2) and [LGPLV3+](COPYING-LGPLV3).
 
   Please visit the [Gluster Home Page](http://www.gluster.org/) to find out more about Gluster.
+  
+  http://www.gluster.org/
