@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Fetch the report
         run: |
-             apt-get install wget unzip -y
+             sudo apt-get install wget unzip -y
              wget https://build.gluster.org/job/line-coverage/lastSuccessfulBuild/Line_20Coverage_20Report/*zip*/Line_20Coverage_20Report.zip
              unzip Line_20Coverage_20Report.zip
              cp Line_20Coverage_20Report/glusterfs-lcov.info ./coverage.info
