@@ -3,9 +3,7 @@ name: Workflow for Codecov Action
 on: [workflow_dispatch]
 
 jobs:
-
-  get-test-results:
-  
+ 
       runs-on: ubuntu-latest
       steps:
         - name: Download a file
