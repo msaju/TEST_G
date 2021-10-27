@@ -3,8 +3,8 @@ name: Workflow for Codecov Action
 on: [workflow_dispatch]
 
 jobs:
- build:
- 
+  run:
+
       runs-on: ubuntu-latest
       
       steps:
