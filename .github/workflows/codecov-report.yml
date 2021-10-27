@@ -5,17 +5,18 @@ on: [workflow_dispatch]
 jobs:
  
       runs-on: ubuntu-latest
+      
       steps:
-        - name: Download a file
-          uses: carlosperate/download-file-action@v1.0.3
-          id: download-coverage-results
-          with:
+      
+         - uses: carlosperate/download-file-action@v1.0.3
+         - name: Download a file
+           with:
             file-url: 'wget https://build.gluster.org/job/line-coverage/lastSuccessfulBuild/Line_20Coverage_20Report/index.html'
             file-name: 'Line_20Coverage_20Report.html'
             location: './report'
-        - name: Print the file path
-          run: echo "The file was downloaded to ${{ steps.download-coverage-results.outputs.file-path }}"
-        - name: Upload coverage to Codecov
-        - uses: codecov/codecov-action@v2
-          with:
+         - name: Print the file path
+           run: echo "The file was downloaded to ${{ steps.download-coverage-results.outputs.file-path }}"
+         - name: Upload coverage to Codecov
+         - uses: codecov/codecov-action@v2
+           with:
             files: ./Line_20Coverage_20Report.html
