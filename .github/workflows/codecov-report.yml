@@ -9,8 +9,8 @@ jobs:
              sudo apt-get install wget unzip -y
              wget https://build.gluster.org/job/line-coverage/lastSuccessfulBuild/Line_20Coverage_20Report/*zip*/Line_20Coverage_20Report.zip
              unzip Line_20Coverage_20Report.zip
-             cp Line_20Coverage_20Report/glusterfs-lcov.info ./coverage.info
+             cp Line_20Coverage_20Report/index.html ./results.html
       - name: Upload
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2
         with:
-          files: ./coverage.info
+          files: ./results.html
